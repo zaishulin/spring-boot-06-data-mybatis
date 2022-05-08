@@ -25,6 +25,7 @@ public class DeptController {
     @Cacheable(cacheNames="dept",key="#id")
     @GetMapping("/dept/{id}")
     public Department getDepartment(@PathVariable("id") Integer id){
+        System.out.println("部门id:"+id);
         return departmentMapper.getDeptById(id);
     }
 
